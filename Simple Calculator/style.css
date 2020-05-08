@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+}
+
+body {
+  background-color: rgb(94, 94, 94);
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(#fee8c8, white, #fee8c8);
+}
+
+.calculator {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+}
+
+.operation,
+.delete,
+.equals,
+.allClear {
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bold;
+  /* border-radius: 40px; */
+  border: none;
+  background-color: rgba(227, 74, 51, 0.8);
+  margin: 1px;
+}
+
+.numbers {
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bold;
+  /* border-radius: 40px; */
+  border: none;
+  background-color: rgba(255, 188, 134, 0.8);
+  margin: 1px;
+}
+
+.largeBtn {
+  grid-column: span 2;
+}
+
+.numbers:hover {
+  background-color: rgba(255, 188, 134, 1);
+}
+
+.operation:hover,
+.delete:hover,
+.equals:hover,
+.allClear:hover {
+  background-color: rgba(227, 74, 51, 1);
+}
+
+/* output section  */
+.output {
+  grid-column: 1/ -1;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* border-radius: 20px; */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  word-wrap: break-word;
+  word-break: break-all;
+  margin: 0px 1px 1px 1px;
+}
+
+.previous {
+  color: rgb(197, 197, 197);
+  font-size: 15px;
+}
+
+.current {
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+}
